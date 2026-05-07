@@ -10,4 +10,8 @@ public class CadastroClientesApplication {
 		SpringApplication.run(CadastroClientesApplication.class, args);
 	}
 
+
+	// 8 - @ManyToOne e @OneToMany - Relacionamento entre tabelas <--- ultima auala
+
+
 }
