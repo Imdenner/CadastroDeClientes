@@ -1,5 +1,6 @@
 package com.dennerdev.cadastro_clientes.Ninjas;
 
+
 import com.dennerdev.cadastro_clientes.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.*;

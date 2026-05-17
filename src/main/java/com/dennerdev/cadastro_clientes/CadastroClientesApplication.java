@@ -11,7 +11,7 @@ public class CadastroClientesApplication {
 	}
 
 
-	// 8 - @ManyToOne e @OneToMany - Relacionamento entre tabelas <--- ultima auala
+
 
 
 }
