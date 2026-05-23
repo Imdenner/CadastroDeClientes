@@ -1,8 +1,10 @@
 package com.dennerdev.cadastro_clientes.Ninjas;
 
+import jakarta.servlet.http.PushBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class NinjaService {
@@ -14,8 +16,14 @@ public class NinjaService {
     }
 
     // Listar todos os meus ninjas
-        public List<NinjaModel>listarNinjas(){
+    public List<NinjaModel> listarNinjas() {
         return ninjaRepository.findAll();
+    }
+
+    // Listar todos os meus ninjas por ID
+    public NinjaModel listarNinjasporId(Long id) {
+        Optional<NinjaModel> ninjaPorId = ninjaRepository.findById(id);
+        return ninjaPorId.orElse(null);
     }
 
 }
