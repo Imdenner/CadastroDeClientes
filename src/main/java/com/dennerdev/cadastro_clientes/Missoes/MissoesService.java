@@ -18,11 +18,18 @@ public class MissoesService {
     public List<MissoesModel> listarMissoes(){
         return missoesRepository.findAll();
     }
-
     // Listar todos as missoes por ID
     public MissoesModel listarMissoesPorId(Long id){
         Optional<MissoesModel> missoesPorId = missoesRepository.findById(id);
         return missoesPorId.orElse(null);
+    }
+    // Criar uma nova missão
+    public MissoesModel criarMissao(MissoesModel missao){
+        return missoesRepository.save(missao);
+    }
+    // Deletar missao por ID - tem que ser um metodo VOID
+    public void deletarMissaoPorId(Long id){
+        missoesRepository.deleteById(id);
     }
 
 
