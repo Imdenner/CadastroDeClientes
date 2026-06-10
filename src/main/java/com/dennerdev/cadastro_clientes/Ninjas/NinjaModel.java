@@ -1,6 +1,4 @@
 package com.dennerdev.cadastro_clientes.Ninjas;
-
-
 import com.dennerdev.cadastro_clientes.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.*;
@@ -28,8 +26,14 @@ public class NinjaModel {
     @Column(unique = true)
     private String email;
 
+    @Column (name = "img_url")
+    private String imgUrl;
+
     @Column (name ="idade")
     private int idade;
+
+    @Column (name = "rank")
+    private String rank;
 
     // @ManyToOne - Várias missões pertencem a um NINJA
     @ManyToOne
